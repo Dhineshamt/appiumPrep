@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DeviceSuite]" parallel="tests">
+  <parameter name="port" value="4725"/>
+  <parameter name="device" value="ZY223HX636"/>
+  <parameter name="version" value="6.0.1"/>
+  <parameter name="platformname" value="Android"/>
+  <test name="Device 1">
+    <parameter name="port" value="4723"/>
+    <parameter name="device" value="da7e6aee0504"/>
+    <parameter name="version" value="6.0.1"/>
+    <parameter name="platformname" value="Android"/>
+    <classes>
+      <class name="appium.appiumPrep.GridExecutionUsingTestNG">
+        <methods>
+          <include name="Surfing"/>
+        </methods>
+      </class> <!-- appium.appiumPrep.GridExecutionUsingTestNG -->
+    </classes>
+  </test> <!-- Device 1 -->
+  <test name="Device 2">
+    <parameter name="port" value="4725"/>
+    <parameter name="device" value="ZY223HX636"/>
+    <parameter name="version" value="6.0.1"/>
+    <parameter name="platformname" value="Android"/>
+    <classes>
+      <class name="appium.appiumPrep.GridExecutionUsingTestNG">
+        <methods>
+          <include name="Surfing"/>
+        </methods>
+      </class> <!-- appium.appiumPrep.GridExecutionUsingTestNG -->
+    </classes>
+  </test> <!-- Device 2 -->
+  <test name="Device 2(failed)" parallel="tests">
+    <parameter name="port" value="4725"/>
+    <parameter name="device" value="ZY223HX636"/>
+    <parameter name="version" value="6.0.1"/>
+    <parameter name="platformname" value="Android"/>
+    <classes>
+      <class name="appium.appiumPrep.GridExecutionUsingTestNG">
+        <methods>
+          <include name="Surfing"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- appium.appiumPrep.GridExecutionUsingTestNG -->
+    </classes>
+  </test> <!-- Device 2(failed) -->
+  <test name="Device 1(failed)" parallel="tests">
+    <parameter name="port" value="4723"/>
+    <parameter name="device" value="da7e6aee0504"/>
+    <parameter name="version" value="6.0.1"/>
+    <parameter name="platformname" value="Android"/>
+    <classes>
+      <class name="appium.appiumPrep.GridExecutionUsingTestNG">
+        <methods>
+          <include name="Surfing"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- appium.appiumPrep.GridExecutionUsingTestNG -->
+    </classes>
+  </test> <!-- Device 1(failed) -->
+</suite> <!-- Failed suite [DeviceSuite] -->
